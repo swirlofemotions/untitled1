@@ -1,0 +1,61 @@
+/* Общие стили проекта. Уровень: простой учебный сайт */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+#top { min-height: 100%; }
+body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #263238; background: #f3f0ea; }
+img { max-width: 100%; display: block; }
+a { color: #125d72; }
+a:link { text-decoration: none; }
+a:visited { color: #6d4c41; }
+a:hover { color: #d35400; }
+a:active { color: #111; }
+header { position: sticky; top: 0; z-index: 10; background: #174b5a; color: white; box-shadow: 0 2px 8px #0003; }
+.header-inner { max-width: 1100px; margin: auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.logo { font-size: 1.25rem; font-weight: bold; letter-spacing: .5px; }
+nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 7px; justify-content: flex-end; }
+nav > ul > li { display: inline-block; }
+nav a { color: #fff; padding: 7px 10px; border-radius: 4px; }
+nav a:hover, nav a.active { background: #d9822b; color: #fff; }
+main { max-width: 1100px; margin: 0 auto; padding: 30px 20px 60px; }
+.hero { position: relative; background: linear-gradient(120deg, #dce8e4, #f8ead8); padding: 42px; border-left: 7px solid #d9822b; border-radius: 6px; overflow: hidden; }
+.hero::after { content: "Г"; position: absolute; right: 35px; bottom: -48px; font-size: 13rem; color: #174b5a18; font-weight: bold; }
+h1, h2, h3 { line-height: 1.2; color: #174b5a; }
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); margin-top: 0; }
+h2 { border-bottom: 2px solid #d9822b; padding-bottom: 7px; margin-top: 38px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.card, article, aside, .form-box { background: #fff; padding: 20px; border: 1px solid #d9d1c6; border-radius: 6px; box-shadow: 0 2px 7px #0000000c; }
+.card h3, article h3 { margin-top: 0; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+figure { margin: 0; background: #fff; border: 1px solid #ddd; padding: 7px; border-radius: 4px; }
+figure img { width: 100%; height: 170px; object-fit: cover; }
+figcaption { font-size: .9rem; padding: 6px 3px 1px; }
+.float-photo { float: left; width: 190px; margin: 0 20px 10px 0; border-radius: 50%; shape-outside: circle(50%); }
+.clearfix::after { content: ""; display: table; clear: both; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { padding: 11px; border: 1px solid #c9c0b5; text-align: left; vertical-align: top; }
+thead { background: #174b5a; color: #fff; }
+tbody tr:nth-child(even) { background: #eeeae4; }
+tbody tr:hover { background: #ffe5c8; }
+.map { width: 100%; min-height: 350px; border: 0; }
+.tags span, mark { display: inline-block; background: #f3d3aa; padding: 3px 8px; margin: 3px; border-radius: 12px; }
+.skill { margin: 14px 0; }
+.skill-label { display: flex; justify-content: space-between; }
+.bar { height: 20px; background: #ddd; border-radius: 4px; overflow: hidden; }
+.bar span { display: block; height: 100%; background: #d9822b; }
+article p { margin-top: 0.7em; }
+input[type="email"] { background: #fffdf8; }
+input, textarea, select { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #aaa; border-radius: 4px; font: inherit; }
+label { display: block; margin: 15px 0; font-weight: bold; }
+input:focus, textarea:focus, select:focus { outline: 3px solid #d9822b66; border-color: #d9822b; }
+input:required:invalid, textarea:required:invalid { border-left: 5px solid #c0392b; }
+input:required:valid, textarea:required:valid { border-left: 5px solid #2e8b57; }
+button { background: #174b5a; color: white; border: 0; padding: 11px 22px; border-radius: 4px; cursor: pointer; }
+button:hover { background: #d9822b; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.notice { border-left: 4px solid #d9822b; padding: 10px 15px; background: #fff8ef; }
+footer { background: #263238; color: #eee; padding: 28px 20px; }
+footer .footer-inner { max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; }
+footer a { color: #ffd39b; }
+.back-top { position: fixed; right: 18px; bottom: 18px; background: #d9822b; color: white; padding: 7px 10px; border-radius: 50%; }
+small { color: #65747b; }
+@media (max-width: 700px) { .header-inner { display: block; } nav ul { justify-content: flex-start; margin-top: 10px; } .hero { padding: 25px; } .float-photo { float: none; width: 140px; margin: 0 auto 15px; } th, td { padding: 7px; font-size: .9rem; } }
